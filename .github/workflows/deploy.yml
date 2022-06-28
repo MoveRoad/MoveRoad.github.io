@@ -47,4 +47,3 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: ./my-portfolio/build # The folder the action should deploy.
-          token: ${{ secrets.GH_PAT }}
