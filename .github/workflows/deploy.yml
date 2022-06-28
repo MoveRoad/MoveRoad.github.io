@@ -22,7 +22,7 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       - name: Checkout source code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Cacheing
         uses: actions/cache@v2
@@ -46,5 +46,5 @@ jobs:
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: . # The folder the action should deploy.
+          folder: ./public # The folder the action should deploy.
           token: ${{ secrets.GH_PAT }}
