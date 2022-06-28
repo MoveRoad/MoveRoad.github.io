@@ -43,8 +43,8 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Deploy Docs
-        uses: actions/checkout@v2
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
-          lfs: true
+          folder: build # The folder the action should deploy.
           token: ${{ secrets.GH_PAT }}
