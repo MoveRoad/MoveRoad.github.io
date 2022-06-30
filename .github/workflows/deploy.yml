@@ -49,11 +49,11 @@ jobs:
       - name: CI Setup
         run: npm ci
 
-      # - name: Build
-      #   run: npm run build
+      - name: Build
+        run: npm run build
 
-      - name: Export
-        run: npm run export
+      # - name: Export
+      #   run: npm run export
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
