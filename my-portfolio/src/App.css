@@ -1,38 +1,113 @@
-.App {
-  text-align: center;
+#early2021 {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  min-width: 1200px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#early2021 .inner {
+  position: relative;
+  width: 1200px;
+  margin: 0 auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#early2021 .top {
+  position: relative;
+  width: 100%;
+  background: url("http://img247.etoos.com/web/w247/images/cnt/recruit/early2021/main_bg.jpg")
+    50% 0 #7f15d5;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+#early2021 .top .inner {
+  height: 962px;
 }
 
-.App-link {
-  color: #61dafb;
+#early2021 .top .main_img {
+  position: absolute;
+  z-index: 5;
+  opacity: 0;
+  animation-duration: 1s;
+  animation-fill-mode: both;
 }
 
-@keyframes App-logo-spin {
+#early2021 .top .pacles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+#early2021 .top .c1_s img {
+  position: absolute;
+  animation: star 20s linear infinite;
+  margin-left: 0;
+  margin-top: 0;
+  opacity: 0;
+}
+
+#early2021 .top .c1_s img:nth-child(1) {
+  animation-delay: 0;
+  animation-duration: 1.6s;
+}
+
+#early2021 .top .c1_s img:nth-child(2) {
+  animation-delay: -1.5s;
+  animation-duration: 1.4s;
+}
+
+#early2021 .top .c1_s img:nth-child(3) {
+  animation-delay: -0.7s;
+  animation-duration: 1.2s;
+}
+
+#early2021 .top .c1_s img:nth-child(4) {
+  animation-delay: -1s;
+  animation-duration: 1s;
+}
+
+#early2021 .top .c1_s img:nth-child(5) {
+  animation-delay: 0.2s;
+  animation-duration: 2s;
+}
+
+#early2021 .top .c1_s img:nth-child(6) {
+  animation-delay: -2s;
+  animation-duration: 1.8s;
+}
+
+#early2021 .top .c1_s img:nth-child(7) {
+  animation-delay: -0.5s;
+  animation-duration: 1.2s;
+}
+
+#early2021 .top .c1_s img:nth-child(8) {
+  animation-delay: -1.2s;
+  animation-duration: 2s;
+}
+
+@keyframes star {
   from {
-    transform: rotate(0deg);
+    opacity: 0;
+    margin-left: 0;
+    margin-top: 0;
   }
+
+  35% {
+    opacity: 1;
+    margin-left: -5%;
+    margin-top: 5%;
+  }
+
+  70% {
+    opacity: 0;
+    margin-left: -10%;
+    margin-top: 10%;
+  }
+
   to {
-    transform: rotate(360deg);
+    opacity: 0;
+    margin-left: -10%;
+    margin-top: 10%;
   }
 }
