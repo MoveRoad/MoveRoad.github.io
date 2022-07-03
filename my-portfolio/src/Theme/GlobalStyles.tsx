@@ -14,6 +14,17 @@ const GlobalStyles = createGlobalStyle`
     li {
         margin: 10px 0;
     }
+
+    @media (max-width: 768px){
+        h1{
+            font-size: 25px;
+            padding-left: 5px;
+        }
+
+        li{
+            font-size: 15px;
+        }
+    }
 `;
 
 export default GlobalStyles;

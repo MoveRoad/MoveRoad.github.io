@@ -7,18 +7,23 @@ function App() {
       <GlobalStyles />
       <Header_container>
         <h1>Donggil Lee</h1>
-        <a href="https://github.com/MoveRoad">
-          <Github__logo src="/github-logo.png" alt="github_link"></Github__logo>
-        </a>
-        <a href="https://moveroad.tistory.com">
-          <Blog__logo src="/blog-logo.png" alt="tistory_link"></Blog__logo>
-        </a>
+        <Link__mySite>
+          <a href="https://github.com/MoveRoad">
+            <Github__logo
+              src="/github-logo.png"
+              alt="github_link"
+            ></Github__logo>
+          </a>
+          <a href="https://moveroad.tistory.com">
+            <Blog__logo src="/blog-logo.png" alt="tistory_link"></Blog__logo>
+          </a>
+        </Link__mySite>
       </Header_container>
       <Body>
         <dl>
+          <h1>📌 Contact & About me</h1>
+          <hr />
           <ul>
-            <h1>📌 Contact & About me</h1>
-            <hr />
             <li>
               Email : <a href="mailto:oio31250@gmail.com">oio31250@gmail.com</a>
             </li>
@@ -35,9 +40,9 @@ function App() {
               </a>
             </li>
           </ul>
+          <h1>🔍 Front-End Developer</h1>
+          <hr />
           <ul>
-            <h1>🔍 Front-End Developer</h1>
-            <hr />
             <p>
               안녕하세요. Junior Front-End Developer로 React, Next, Redux,
               Github 등을
@@ -49,9 +54,9 @@ function App() {
             </p>
             <p>협업과 프로젝트와 관련된 소통을 좋아합니다.</p>
           </ul>
+          <h1>🛠️ Stacks</h1>
+          <hr />
           <ul>
-            <h1>🛠️ Stacks</h1>
-            <hr />
             <li>JavaScript (with TypeScript)</li>
             <ol>
               <li>ES6 문법을 이해하고 사용할 수 있습니다.</li>
@@ -85,9 +90,9 @@ function App() {
               </li>
             </ol>
           </ul>
+          <h1>📃 Experience & Project</h1>
+          <hr />
           <ul>
-            <h1>📃 Experience & Project</h1>
-            <hr />
             <h2>Together Sports : 투스</h2>
             <p>
               Notion :{" "}
@@ -120,9 +125,9 @@ function App() {
             <li>Websocket, STOMP</li>
             <li>Axios</li>
           </ul>
+          <h1>👨‍🎓 Education</h1>
+          <hr />
           <ul>
-            <h1>👨‍🎓 Education</h1>
-            <hr />
             <li>
               <h3>계명대학교 컴퓨터공학 전공</h3>
             </li>
@@ -137,6 +142,12 @@ function App() {
     </>
   );
 }
+
+const Link__mySite = style.div`
+  @media (max-width: 768px){
+    display: none;
+  }
+`;
 
 const Header_container = style.header`
   position: fixed;
