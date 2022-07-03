@@ -6,6 +6,14 @@ const GlobalStyles = createGlobalStyle`
         padding: 0;
         box-sizing: border-box;
     }
+
+    p {
+        margin: 5px 0;
+    }
+
+    li {
+        margin: 10px 0;
+    }
 `;
 
 export default GlobalStyles;
