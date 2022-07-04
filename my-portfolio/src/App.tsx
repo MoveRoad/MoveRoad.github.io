@@ -7,7 +7,7 @@ function App() {
       <GlobalStyles />
       <Header_container>
         <h1>Donggil Lee</h1>
-        <Link__mySite>
+        <Link__wrapper>
           <a href="https://github.com/MoveRoad">
             <Github__logo
               src="/github-logo.png"
@@ -17,7 +17,7 @@ function App() {
           <a href="https://moveroad.tistory.com">
             <Blog__logo src="/blog-logo.png" alt="tistory_link"></Blog__logo>
           </a>
-        </Link__mySite>
+        </Link__wrapper>
       </Header_container>
       <Body>
         <dl>
@@ -57,11 +57,10 @@ function App() {
           <h1>🛠️ Stacks</h1>
           <hr />
           <ul>
-            <li>JavaScript (with TypeScript)</li>
+            <li>JavaScript</li>
             <ol>
               <li>ES6 문법을 이해하고 사용할 수 있습니다.</li>
               <li>Vanila JS를 이용하여 SPA를 구현할 수 있습니다.</li>
-              <li>TypeScript이 왜 필요한지에 대해 알고 학습 중에 있습니다.</li>
             </ol>
             <li>React (with Next, Redux)</li>
             <ol>
@@ -95,35 +94,49 @@ function App() {
           <ul>
             <h2>Together Sports : 투스</h2>
             <p>
-              Notion :{" "}
+              개발관리 페이지 :{" "}
               <a href="https://www.notion.so/Together-Sports-fa0476b057034596bc276438e8198e77">
-                Go to Notion
+                Notion
               </a>
             </p>
             <p>
-              GitHub Repo :{" "}
+              깃허브 레포 :{" "}
               <a href="https://github.com/Cha-Young-Ho/TogetherSports">
-                Go to Repository
+                Repository
+              </a>
+            </p>
+            <p>
+              {" "}
+              홈페이지 :{" "}
+              <a href="https://together-sports.com">
+                https://together-sports.com
               </a>
             </p>
             <hr />
             <h3> 설명 </h3>
             <li>
-              웹 기반 서비스로 익명의 동네 사람들과 운동 파트너를 구할 수 있게
-              도와주는 서비스입니다.
+              익명의 동네 사람들과 운동 파트너를 구할 수 있게 도와주는 웹 기반
+              서비스입니다.
             </li>
+            <li> Main Tech : Next, Spring boot, MySQL</li>
             <li>
               Front 2명, Back 2명, Designer 1명으로 총 5명이 진행한 프로젝트로
               <br />
               설계부터 배포까지 분배하여 협업하였습니다.
             </li>
             <h3> 담당 업무 </h3>
-            <li></li>
+            <li> Websocket을 이용하여 방 내 실시간 통신 </li>
+            <li> 방 목록 필터 기능 및 무한 스크롤링</li>
+            <li> 마이룸 화면의 캐러셀(슬라이더) 및 캘린더 기능</li>
+            <li> 회원정보 & 수정 & 방 생성</li>
+            <li> 카카오 맵 API를 이용해 지역 선택 기능</li>
+            <li> Auth0 기능과 Refresh Token을 이용한 회원관리 기능</li>
             <h3> 사용한 기술 스택 </h3>
             <li>Next.js</li>
-            <li>Redux</li>
+            <li>Redux, ReduxWrapper</li>
             <li>Websocket, STOMP</li>
             <li>Axios</li>
+            <li>styled jsx</li>
           </ul>
           <h1>👨‍🎓 Education</h1>
           <hr />
@@ -143,7 +156,7 @@ function App() {
   );
 }
 
-const Link__mySite = style.div`
+const Link__wrapper = style.div`
   @media (max-width: 768px){
     display: none;
   }
