@@ -13,6 +13,7 @@ const Experience = () => {
           src="/together-sports-video.mp4"
           autoPlay
           loop
+          muted
           poster="/MainBanner.png"
         ></TosVideo>
         {/* </Link> */}
