@@ -1,87 +1,16 @@
-import style from "styled-components";
-import GlobalStyles from "./Theme/GlobalStyles";
-import Contact from "./components/Contact";
-import MyIntroduce from "./components/MyIntroduce";
-import Stacks from "./components/Stacks";
-import Experience from "./components/Experience";
-import Education from "./components/Education";
+import { Route, Routes } from "react-router-dom";
+import Main from "./pages/Main";
+import TogetherSports from "./pages/projects/TogetherSports";
 
 function App() {
   return (
-    <>
-      <GlobalStyles />
-      <Header_container>
-        <h1>Donggil Lee</h1>
-        <LinkWrapper>
-          <a href="https://github.com/MoveRoad">
-            <Github__logo
-              src="/github-logo.png"
-              alt="github_link"
-            ></Github__logo>
-          </a>
-          <a href="https://moveroad.tistory.com">
-            <Blog__logo src="/blog-logo.png" alt="tistory_link"></Blog__logo>
-          </a>
-        </LinkWrapper>
-      </Header_container>
-      <Body>
-        <dl>
-          <Contact />
-          <MyIntroduce />
-          <Stacks />
-          <Experience />
-          <Education />
-        </dl>
-      </Body>
-    </>
+    <div className="App">
+      <Routes>
+        <Route path="/" element={<Main />} />
+        <Route path="/project/together-sports" element={<TogetherSports />} />
+      </Routes>
+    </div>
   );
 }
-
-const LinkWrapper = style.div`
-  @media (max-width: 768px){
-    display: none;
-  }
-`;
-
-const Header_container = style.header`
-  position: fixed;
-  top: 0;
-  left: 0;
-  width:100%;
-  height:100px;
-  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2);
-  background-color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
-`;
-
-const Github__logo = style.img`
-  width: 30px;
-  height: 30px;
-  position: absolute;
-  right: 100px;
-  top: 35px;
-  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.7);
-  border-radius: 100%;
-`;
-
-const Blog__logo = style.img`
-  width: 30px;
-  height: 30px;
-  position: absolute;
-  right: 50px;
-  top: 35px;
-  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.7);
-`;
-
-const Body = style.body`
-  width: 100%;
-  margin: 110px 0;
-  display: flex;
-  justify-content: center;
-  text-align: left;
-`;
 
 export default App;

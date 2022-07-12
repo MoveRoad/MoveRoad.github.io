@@ -1,10 +1,21 @@
+import { Link } from "react-router-dom";
+import styled from "styled-components";
+
 const Experience = () => {
   return (
     <>
       <h1>📃 Experience & Project</h1>
       <hr />
       <ul>
-        <h2>Together Sports : 투스</h2>
+        <h2>Together Sports : 투스 ( 2022-02 ~ 2022-06 )</h2>
+        {/* <Link to={`project/together-sports`}> */}
+        <TosVideo
+          src="/together-sports-video.mp4"
+          autoPlay
+          loop
+          poster="/MainBanner.png"
+        ></TosVideo>
+        {/* </Link> */}
         <p>
           개발관리 페이지 :{" "}
           <a href="https://www.notion.so/Together-Sports-fa0476b057034596bc276438e8198e77">
@@ -52,5 +63,10 @@ const Experience = () => {
     </>
   );
 };
+
+const TosVideo = styled.video`
+  width: 100%;
+  height: 300px;
+`;
 
 export default Experience;

@@ -6,7 +6,7 @@ const Stacks = () => {
       <ul>
         <li>JavaScript</li>
         <ol>
-          <li>ES6 문법을 이해하고 사용할 수 있습니다.</li>
+          <li>ES6 문법을 이해하고 능숙하게 사용할 수 있습니다.</li>
           <li>Vanila JS를 이용하여 SPA를 구현할 수 있습니다.</li>
         </ol>
         <li>React (with Next, Redux)</li>
@@ -14,6 +14,7 @@ const Stacks = () => {
           <li>Next.js를 이용하여 SSR 개발 경험이 있습니다.</li>
           <li>Redux를 이용해 상태관리 라이브러리를 사용할 수 있습니다.</li>
           <li>React Hooks를 이해하고 사용할 수 있습니다.</li>
+          <li>재사용 가능한 컴포넌트를 고려하여 작업합니다.</li>
         </ol>
         <li>CI/CD</li>
         <ol>
