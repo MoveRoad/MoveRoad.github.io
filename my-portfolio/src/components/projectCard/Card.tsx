@@ -47,8 +47,8 @@ const Card = ({
             {cooperation ? "팀 프로젝트" : "개인 프로젝트"}
           </Cooperation>
           <Stacks>
-            {stacks.map((stack) => {
-              return <Stack>{stack}</Stack>;
+            {stacks.map((stack, idx) => {
+              return <Stack key={idx}>{stack}</Stack>;
             })}
           </Stacks>
           <Date>{`${startDate} ~ ${endDate}`}</Date>

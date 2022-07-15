@@ -5,11 +5,13 @@ import styled, { keyframes } from "styled-components";
 interface props {
   modalShow: boolean;
   title: string;
-  project: () => string;
+  project: () => JSX.Element;
   toggle: () => void;
 }
 
 const Modal = ({ modalShow, title, project, toggle }: props) => {
+  const projectDescription = project();
+
   return (
     <>
       {modalShow
@@ -25,7 +27,9 @@ const Modal = ({ modalShow, title, project, toggle }: props) => {
                 <ModalContainer>
                   <Title>{`${title}`}</Title>
                   <hr />
-                  <Body>{project()}</Body>
+                  <Body>
+                    <>{projectDescription}</>
+                  </Body>
                 </ModalContainer>
               </ModalBackground>
             </React.Fragment>,
