@@ -7,7 +7,13 @@ const Experience = () => {
       <h1>📃 Experience & Project</h1>
       <hr />
       <ProjectSection>
-        <Card></Card>
+        <Card
+          projectName={`투스 : Together Sports`}
+          cooperation={true}
+          stacks={["Next", "Redux", "WebSocket", "Auth0", "AWS"]}
+          startDate={`2022-02`}
+          endDate={`2022-06 (배포 O)`}
+        ></Card>
         <ul>
           <li>
             개발관리 페이지 :{" "}
@@ -30,8 +36,8 @@ const Experience = () => {
           </li>
         </ul>
 
-        {/* <details>
-          <SummaryTitle> 설명 </SummaryTitle>
+        {/* <ul>
+          <h2> 설명 </h2>
           <li>
             익명의 동네 사람들과 운동 파트너를 구할 수 있게 도와주는 웹 기반
             서비스입니다.
@@ -56,7 +62,7 @@ const Experience = () => {
           <li>Websocket, STOMP</li>
           <li>Axios</li>
           <li>styled jsx</li>
-        </details> */}
+        </ul> */}
       </ProjectSection>
     </>
   );

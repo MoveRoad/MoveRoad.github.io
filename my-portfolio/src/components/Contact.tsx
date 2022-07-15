@@ -5,7 +5,7 @@ const Contact = () => {
       <hr />
       <ul>
         <li>
-          Email : <a href="mailto:oio31250@gmail.com">oio31250@gmail.com</a>
+          Email : <a href="mailto:oio3215@naver.com">oio3215@naver.com</a>
         </li>
         <li>
           GitHub :{" "}

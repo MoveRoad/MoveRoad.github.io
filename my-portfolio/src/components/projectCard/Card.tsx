@@ -1,9 +1,24 @@
 import { useState } from "react";
 import styled from "styled-components";
 import Modal from "../modal/modal";
-import useModalHook from "./useModalHook";
+import useModalHook from "../modal/useModalHook";
+import { TogetherSports } from "../project/togetherSports";
 
-const Card = () => {
+export interface props {
+  projectName: string;
+  cooperation: boolean;
+  stacks: string[];
+  startDate: string;
+  endDate: string;
+}
+
+const Card = ({
+  projectName,
+  cooperation,
+  stacks,
+  startDate,
+  endDate,
+}: props) => {
   const { modalShow, toggleModal } = useModalHook();
   const [title, setTitle] = useState<string>("");
 
@@ -14,7 +29,11 @@ const Card = () => {
 
   return (
     <>
-      <Card__Container>
+      <CardContainer
+        onClick={() => {
+          handleModal(projectName);
+        }}
+      >
         <Video
           src="/together-sports-video.mp4"
           autoPlay
@@ -22,41 +41,82 @@ const Card = () => {
           muted
           poster="/MainBanner.png"
         ></Video>
-        <Title>
-          <button
-            onClick={(e) => {
-              handleModal("Together Sports");
-            }}
-          >
-            Together Sports : 투스
-          </button>
-        </Title>
-      </Card__Container>
-      <Modal modalShow={modalShow} title={title} project={"test"}></Modal>
+        <Description>
+          <Title>{projectName}</Title>
+          <Cooperation>
+            {cooperation ? "팀 프로젝트" : "개인 프로젝트"}
+          </Cooperation>
+          <Stacks>
+            {stacks.map((stack) => {
+              return <Stack>{stack}</Stack>;
+            })}
+          </Stacks>
+          <Date>{`${startDate} ~ ${endDate}`}</Date>
+        </Description>
+      </CardContainer>
+      <Modal
+        modalShow={modalShow}
+        title={title}
+        project={TogetherSports}
+        toggle={toggleModal}
+      ></Modal>
     </>
   );
 };
 
-const Card__Container = styled.div`
+const CardContainer = styled.div`
   width: 300px;
   height: 300px;
-  border-radius: 10px;
+  border-radius: 20px;
   box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2);
-  /* cursor: pointer; */
+  cursor: pointer;
+
+  &:hover {
+    background-color: rgba(55, 53, 47, 0.03);
+  }
 `;
 
 const Video = styled.video`
   width: 100%;
-  height: 250px;
+  height: 180px;
 `;
 
-const Title = styled.div`
+const Description = styled.div`
   width: 100%;
-  height: 50px;
+  height: 120px;
   border-top: solid 0.5px #d8d8d8;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  padding: 2px 10px;
+`;
+
+const Title = styled.p`
+  font-weight: bold;
+`;
+
+const Cooperation = styled.div`
+  display: inline-block;
+  font-size: 0.8rem;
+  border-radius: 5px;
+  padding: 1px 5px;
+  background-color: #e3e2e0;
+`;
+
+const Stacks = styled.div`
+  white-space: nowrap;
+  overflow-x: hidden;
+  margin: 2px 0;
+`;
+
+const Stack = styled.div`
+  display: inline-block;
+  font-size: 0.8rem;
+  border-radius: 5px;
+  padding: 1px 5px;
+  background-color: #f5e0e9;
+  margin-right: 5px;
+`;
+
+const Date = styled.p`
+  font-size: 0.8rem;
 `;
 
 export default Card;

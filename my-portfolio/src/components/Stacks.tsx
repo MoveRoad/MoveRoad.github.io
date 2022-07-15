@@ -14,11 +14,15 @@ const Stacks = () => {
           <li>Next.js를 이용하여 SSR 개발 경험이 있습니다.</li>
           <li>Redux를 이용해 상태관리 라이브러리를 사용할 수 있습니다.</li>
           <li>React Hooks를 이해하고 사용할 수 있습니다.</li>
+          <li>
+            Custom Hook을 만들어 응집도를 고려한 코드를 작성할 수 있습니다.
+          </li>
           <li>재사용 가능한 컴포넌트를 고려하여 작업합니다.</li>
         </ol>
         <li>CI/CD</li>
         <ol>
-          <li>Github Actions를 이용해 자동 배포 경험이 있습니다.</li>
+          <li>Github Actions를 이용해 gh-pages로 자동 배포 경험이 있습니다.</li>
+          <li>기본적인 workflow 작성 방법을 알고 있습니다.</li>
           <li>CORS에 대한 이해를 하고 있습니다.</li>
         </ol>
         <li>ETC</li>
