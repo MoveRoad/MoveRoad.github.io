@@ -19,9 +19,8 @@ const Card = ({
   startDate,
   endDate,
 }: props) => {
-  const { modalShow, toggleModal } = useModalHook();
   const [title, setTitle] = useState<string>("");
-
+  const { modalShow, toggleModal } = useModalHook();
   const handleModal = (title: string) => {
     setTitle(title);
     toggleModal();

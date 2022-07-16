@@ -1,3 +1,5 @@
+import styled from "styled-components";
+
 export const TogetherSports = () => {
   return (
     <ul>
@@ -14,6 +16,13 @@ export const TogetherSports = () => {
       </li>
       <h3> 담당 업무 </h3>
       <li> Websocket을 이용하여 방 내 실시간 통신 </li>
+      <Video
+        src="/websocket.mp4"
+        autoPlay
+        loop
+        muted
+        poster="/room.png"
+      ></Video>
       <li> 방 목록 필터 기능 및 무한 스크롤링</li>
       <li> 마이룸 화면의 캐러셀(슬라이더) 및 캘린더 기능</li>
       <li> 회원정보 & 수정 & 방 생성</li>
@@ -29,3 +38,8 @@ export const TogetherSports = () => {
     </ul>
   );
 };
+
+const Video = styled.video`
+  width: 100%;
+  height: 300px;
+`;
