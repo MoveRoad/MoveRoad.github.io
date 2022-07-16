@@ -2,7 +2,6 @@ import { useState } from "react";
 import styled from "styled-components";
 import Modal from "../modal/modal";
 import useModalHook from "../modal/useModalHook";
-import { TogetherSports } from "../project/togetherSports";
 
 export interface props {
   projectName: string;
@@ -10,6 +9,9 @@ export interface props {
   stacks: string[];
   startDate: string;
   endDate: string;
+  project: () => JSX.Element;
+  image: string;
+  poster: string;
 }
 
 const Card = ({
@@ -18,6 +20,9 @@ const Card = ({
   stacks,
   startDate,
   endDate,
+  project,
+  image,
+  poster,
 }: props) => {
   const [title, setTitle] = useState<string>("");
   const { modalShow, toggleModal } = useModalHook();
@@ -33,13 +38,7 @@ const Card = ({
           handleModal(projectName);
         }}
       >
-        <Video
-          src="/together-sports-video.mp4"
-          autoPlay
-          loop
-          muted
-          poster="/MainBanner.png"
-        ></Video>
+        <Video src={image} autoPlay loop muted poster={poster}></Video>
         <Description>
           <Title>{projectName}</Title>
           <Cooperation>
@@ -56,7 +55,7 @@ const Card = ({
       <Modal
         modalShow={modalShow}
         title={title}
-        project={TogetherSports}
+        project={project}
         toggle={toggleModal}
       ></Modal>
     </>
