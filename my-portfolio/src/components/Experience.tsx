@@ -60,6 +60,14 @@ const CardContainer = styled.div`
   width: 100%;
   display: flex;
   margin: 10px 0;
+
+  @media screen and (max-width: 1024px) {
+    & {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
 `;
 
 export default Experience;

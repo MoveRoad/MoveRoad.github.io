@@ -100,6 +100,10 @@ const Title = styled.h1`
 const Body = styled.body`
   width: 100%;
   padding: 0 50px;
+
+  @media screen and (max-width: 1024px) {
+    padding: 0;
+  }
 `;
 
 export default Modal;

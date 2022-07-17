@@ -1,4 +1,4 @@
-import style from "styled-components";
+import styled from "styled-components";
 import Contact from "../components/Contact";
 import MyIntroduce from "../components/MyIntroduce";
 import Stacks from "../components/Stacks";
@@ -21,12 +21,17 @@ const Main = () => {
   );
 };
 
-const Body = style.body`
-  width: 100%;
-  margin: 110px 0;
+const Body = styled.body`
+  width: 700px;
+  margin: 110px auto;
   display: flex;
-  justify-content: center;
   text-align: left;
+
+  @media screen and (max-width: 1024px) {
+    & {
+      width: 100%;
+    }
+  }
 `;
 
 export default Main;
