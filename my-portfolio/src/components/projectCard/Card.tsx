@@ -1,4 +1,3 @@
-import { useState } from "react";
 import styled from "styled-components";
 import Modal from "../modal/modal";
 import useModalHook from "../modal/useModalHook";
@@ -24,20 +23,18 @@ const Card = ({
   image,
   poster,
 }: props) => {
-  const [title, setTitle] = useState<string>("");
   const { modalShow, toggleModal } = useModalHook();
-  const handleModal = (title: string) => {
-    setTitle(title);
-    toggleModal();
-  };
 
   return (
     <>
-      <CardContainer
-        onClick={() => {
-          handleModal(projectName);
-        }}
-      >
+      <Modal
+        modalShow={modalShow}
+        toggle={toggleModal}
+        title={projectName}
+        project={project}
+      ></Modal>
+
+      <CardContainer onClick={toggleModal}>
         <Video src={image} autoPlay loop muted poster={poster}></Video>
         <Description>
           <Title>{projectName}</Title>
@@ -52,12 +49,6 @@ const Card = ({
           <Date>{`${startDate} ~ ${endDate}`}</Date>
         </Description>
       </CardContainer>
-      <Modal
-        modalShow={modalShow}
-        title={title}
-        project={project}
-        toggle={toggleModal}
-      ></Modal>
     </>
   );
 };
